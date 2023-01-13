@@ -6,9 +6,9 @@
 #include <string>
 
 namespace example {
-// add two numbers together! 
+// add two numbers together!
     [[nodiscard]] static inline auto add(int32_t & arg0, int32_t & arg1) -> int32_t {
-        return arg0 + arg1; 
+        return arg0 + arg1;
     }
 
 //convert a vector of strings into a singular string seperated by spaces only IF all strings passed in are non empty
@@ -23,7 +23,7 @@ namespace example {
         };
         std::string blank = "";
         std::optional<std::string> returnValue = {std::accumulate(vec.begin(), vec.end(), blank,  add_space_fold)};
-        //See what the return value is! 
+        //See what the return value is!
 
         return returnValue;
     }
@@ -31,13 +31,13 @@ namespace example {
 }
 
 [[nodiscard]] auto main(int16_t argc, char ** argv) -> int {
-    //debugger step 1! 
+    //debugger step 1!
     printf("1: Hello world!\n");
     int32_t capturedReturnValue = 4;
     //make sure you can see captured return value
 
     //declare two values:
-    int32_t arg0 = 5, arg1 = 7; 
+    int32_t arg0 = 5, arg1 = 7;
     capturedReturnValue = example::add(arg0, arg1);
     printf("2: add return: %d", capturedReturnValue);
 
